@@ -1,5 +1,7 @@
 # DPLocate Modules
-# DPLocate0-read(DPLocate Step 0): Extract the raw GPS data
+
+## DPLocate0-read(DPLocate Step 0)
+Extract the raw GPS data
 
 ## Table of contents
 1. [Requirements](#requirements)
@@ -67,7 +69,9 @@ For more information, please run
 ```bash
 parse_gps_mc.py -h
 ```
-# DPLocate1-preprocess(DPLocate Step 1): Preprocess the GPS data with temporal filtering
+
+## DPLocate1-preprocess(DPLocate Step 1)
+Preprocess the GPS data with temporal filtering
 
 ## Table of contents
 1. [Requirements](#requirements)
@@ -130,7 +134,8 @@ For more information, please run
 preprocess_gps_mc.py -h
 ```
 
-# DPLocate2-process(DPLocate Step 2): Process the GPS data with clustering (every 150 days for long studies)
+## DPLocate2-process(DPLocate Step 2)
+Process the GPS data with clustering (every 150 days for long studies)
 
 ## Table of contents
 1. [Requirements](#requirements)
@@ -181,7 +186,8 @@ For more information, please run
 ```bash
 process_gps_mc.py -h
 ```
-# DPLocate3-aggregate(DPLocate Step 3): Aggregate the processed daily maps of the study
+## DPLocate3-aggregate(DPLocate Step 3)
+Aggregate the processed daily maps of the study
 
 ## Table of contents
 1. [Requirements](#requirements)
@@ -227,7 +233,8 @@ For more information, please run
 aggregate_gps_mc.py -h
 ```
 
-# DPLocate4-plot(DPLocate Step 4): Plot color-coded GPS daily map
+## DPLocate4-plot(DPLocate Step 4)
+Plot color-coded GPS daily map
 
 ## Table of contents
 1. [Requirements](#requirements)
