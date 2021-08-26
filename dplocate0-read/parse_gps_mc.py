@@ -26,16 +26,13 @@ def main():
 
     argparser.add_argument('--pipeline',
         help='Name of the pipeline to run. Default: parse_gps_mc',
-        default='parse_gps_mc',
-        required=True)
+        default='parse_gps_mc')
     argparser.add_argument('--data-type',
         help='Data type name (Default: "phone")',
-        default='phone',
-        required=True)
+        default='phone')
     argparser.add_argument('--data-dir',
         help='Data directory name (Default: "PROTECTED")',
-        default='PROTECTED',
-        required=True)
+        default='PROTECTED')
     argparser.add_argument('--phone-stream',
         help='Required if data-type is "phone" (Default: gps)',
         default='gps')
