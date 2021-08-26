@@ -26,7 +26,7 @@ def main():
 
     argparser.add_argument('--pipeline',
         help='Name of the pipeline to run. Default: phone_gps',
-        default='phone_gps')
+        default='phone_gps_mc')
     argparser.add_argument('--data-type',
         help='Data type name (Default: "phone")',
         default='phone')
