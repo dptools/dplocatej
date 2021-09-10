@@ -62,7 +62,7 @@ The default is that the pipeline runs for the `new` files.
 ```bash
 # To generate reports for subject A and subject C in STUDY_PILOT under their processed folders
 # Define the PHOENIX, consent and MATLAB directories 
-parse_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] --study STUDY_PILOT --data-type phone --pipeline parse_gps_mc --include active --data-dir PROTECTED --subject A C
+parse_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] --study STUDY_PILOT --data-type phone --include active --data-dir PROTECTED --subject A C
 
 ```
 
@@ -127,7 +127,7 @@ The default is that the pipeline runs for the `new` files.
 ```bash
 # To generate reports for subject A and subject C in STUDY_PILOT under their processed folders
 # Define the PHOENIX, consent and MATLAB directories 
-preprocess_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] --study STUDY_PILOT --data-type phone --pipeline preprocess_gps_mc --include active --data-dir PROTECTED --subject A C
+preprocess_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] --study STUDY_PILOT --data-type phone --include active --data-dir PROTECTED --subject A C
 
 ```
 
@@ -179,8 +179,7 @@ export BEIWE_STUDY_PASSCODE='test passcode 1 2 3'
 ```bash
 # To generate reports for subject A and subject C in STUDY_PILOT under their processed folders
 # Define the PHOENIX, consent and MATLAB directories 
-process_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] 
---study STUDY_PILOT --data-type phone --pipeline process_gps_mc --include active --data-dir PROTECTED --subject A C
+process_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] --study STUDY_PILOT --data-type phone --include active --data-dir PROTECTED --subject A C
 
 ```
 
@@ -226,8 +225,7 @@ export BEIWE_STUDY_PASSCODE='test passcode 1 2 3'
 ```bash
 # To generate reports for subject A and subject C in STUDY_PILOT under their processed folders
 # Define the PHOENIX, consent and MATLAB directories 
-aggregate_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] 
---study STUDY_PILOT --data-type phone --pipeline aggregate_gps_mc --include active --data-dir PROTECTED --subject A C
+aggregate_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] --study STUDY_PILOT --data-type phone --include active --data-dir PROTECTED --subject A C
 ```
 
 For more information, please run
@@ -272,8 +270,7 @@ export BEIWE_STUDY_PASSCODE='test passcode 1 2 3'
 ```bash
 # To generate reports for subject A and subject C in STUDY_PILOT under their processed folders
 # Define the PHOENIX, consent and MATLAB directories 
-phone_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] 
---study STUDY_PILOT --data-type phone --pipeline phone_gps_mc --include active --data-dir PROTECTED --subject A C
+phone_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] --study STUDY_PILOT --data-type phone --include active --data-dir PROTECTED --subject A C
 ```
 
 For more information, please run
