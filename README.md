@@ -60,6 +60,8 @@ acc1: accuracy(m)
 
 
 ### Passphrase
+(Encryption is not applied currently so you can skip all the *Passphrase* sections)
+
 For files that are locked, please provide a passphrase by setting the 
 `BEIWE_STUDY_PASSCODE` environment variable.
 For example:
