@@ -1,6 +1,26 @@
 # DPLocate Modules
 
-There are four DPLocate modules.
+There are five DPLocate modules. They are run in tandem. Their dependencies are:
+
+* MATLAB >= 2017a
+* https://www.mathworks.com/products/mapping.html
+* Python >= 3.6
+* pandas
+
+# Installation
+
+* Make sure you have MATLAB and Python
+* Install the [Mapping Toolbox](https://www.mathworks.com/products/mapping.html)
+* Install Python packages:
+
+      pip install -r requirements.txt
+
+* Finally, clone this repository:
+
+      git clone https://github.com/dptools/dplocate.git
+    
+  Individual module scripts are `dplocate/dplocate*/*py`. Learn more about them below.
+  
 
 # DPLocate0-read
 DPLocate Step 0: Extract the raw GPS data
@@ -38,15 +58,7 @@ acc1: accuracy(m)
 
 - After this step run dplocate-preprocess pipeline
 
-## Installation
 
-To install `dplocate0-read` on your system
-
-```bash
-git clone git@github.com:harvard-nrg/dplocate0-read.git 
-cd dplocate/dplocate0-read
-pip install -r requirements.txt
-```
 ### Passphrase
 For files that are locked, please provide a passphrase by setting the 
 `BEIWE_STUDY_PASSCODE` environment variable.
