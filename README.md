@@ -9,7 +9,7 @@ There are five DPLocate modules. They are run in tandem. Their dependencies are:
 
 # Installation
 
-* Make sure you have MATLAB and Python
+* Make sure you have the stated MATLAB and Python
 * Install the [Mapping Toolbox](https://www.mathworks.com/products/mapping.html)
 * Install Python packages:
 
