@@ -167,9 +167,9 @@ if (exist(output_filepath_mat, 'file') == 2)
     disp('Removing previously processed file');
     delete(output_filepath_mat);
 end
-savefig(strcat(outp,'/',stdy,'-',sb1(1:3),'-gps.fig'))
+savefig(strcat(outp,'/',stdy,'-',sb1,'-gps.fig'))
 img = getframe(gcf);
-imwrite(img.cdata, strcat(outp,'/',stdy,'-',sb1(1:3),'-gps.png'));
+imwrite(img.cdata, strcat(outp,'/',stdy,'-',sb1,'-gps.png'));
 disp('Save daily ...')
 indf_gps=pdy33;
 
@@ -432,15 +432,15 @@ set(gca, 'FontWeight','b')
 set(h25fpp,'YTick',1.5:.7:length(utmz)+.5,'YTickLabel',utmn,'FontSize',24)
 set(gca,'YTick',0.5:60:1440.5,'YTickLabel',epc_lbl{1,1}(1:1:end))  
 set(gca,'XTick',.5:4:tpa+.5,'XTickLabel',0:4:tpa,'XTickLabelRotation',90)
-%title(strcat('study=',num2str(study),'/sb=',sb1(1:3),'/TimeZone'),'Rotation',0, 'FontSize',14, 'FontWeight','b')
+%title(strcat('study=',num2str(study),'/sb=',sb1,'/TimeZone'),'Rotation',0, 'FontSize',14, 'FontWeight','b')
 xrule.FontSize = 24;
 yrule.FontSize = 24;
 xlabel('Relative Days','FontWeight','b','FontSize',24)
 grid on
 xlim([.5,tpa+.5])
-savefig(strcat(outp,'/',stdy,'-',sb1(1:3),'-tmzn.fig'))
+savefig(strcat(outp,'/',stdy,'-',sb1,'-tmzn.fig'))
 img = getframe(gcf);
-imwrite(img.cdata, strcat(outp,'/',stdy,'-',sb1(1:3),'-tmzn.png'));
+imwrite(img.cdata, strcat(outp,'/',stdy,'-',sb1,'-tmzn.png'));
 display('TimeZone Saved.');
 
 save(strcat(outp,'/',sb1,'_gps.mat'),'indf_gps','lnkc','ltkc')

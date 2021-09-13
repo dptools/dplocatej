@@ -11,54 +11,52 @@ logger = logging.getLogger(os.path.basename(__file__))
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def main():
-    argparser = ap.ArgumentParser('PHOENIX wrapper for Phone gps Pipeline')
+    argparser = ap.ArgumentParser('PHOENIX wrapper for Phone gps Pipeline',
+        formatter_class= ap.ArgumentDefaultsHelpFormatter)
 
     # Input and output parameters
     argparser.add_argument('--phoenix-dir',
-        help='Phoenix directory (Default: /ncf/cnl03/PHOENIX/',
-        default='/ncf/cnl03/PHOENIX')
+        help='Phoenix directory',
+        required=True)
     argparser.add_argument('--consent-dir',
-        help='Consent directory (Default: /ncf/cnl03/PHOENIX/GENERAL',
-        default='/ncf/cnl03/PHOENIX/GENERAL')
+        help='Consent directory',
+        required=True)
     argparser.add_argument('--matlab-dir',
         help='Matlab directory',
-        default='/ncf/nrg/sw/lib/phone_gps_mc/master/')
+        required=True)
 
     argparser.add_argument('--pipeline',
-        help='Name of the pipeline to run. Default: phone_gps',
-        default='phone_gps',
-        required=True)
+        help='Name of the pipeline to run',
+        default='phone_gps_mc')
     argparser.add_argument('--data-type',
-        help='Data type name (Default: "phone")',
-        default='phone',
-        required=True)
+        help='Data type name',
+        default='phone')
     argparser.add_argument('--data-dir',
-        help='Data directory name (Default: "PROTECTED")',
-        default='PROTECTED',
-        required=True)
+        help='Data directory name',
+        default='PROTECTED')
     argparser.add_argument('--phone-stream',
-        help='Required if data-type is "phone" (Default: gps)',
+        help='Required if data-type is "phone"',
         default='gps')
     argparser.add_argument('--output-dir',
         help='Path to the output directory')
     argparser.add_argument('--study', 
-        help='Study name. Required. Please provide one value.',
+        help='Study name. Please provide one value.',
         required=True)
     argparser.add_argument('--subject',
         nargs='+', help='Subject ID')
 
     # Basic targeting parameters
     argparser.add_argument('--input-tz',
-        help='Timezone info for the input. (Default: UTC)',
+        help='Timezone info for the input',
         default = 'UTC')
     argparser.add_argument('--day-from',
-        help='Output day from. (optional; Default: 1)',
+        help='Output day from',
         type = int, default = 1)
     argparser.add_argument('--day-to',
-        help='Output day to. (optional; By default, process data for all days)',
+        help='Output day to',
         type = int, default = -1)
     argparser.add_argument('--extension',
-        help='File extension of power files. Default: .csv',
+        help='File extension of power files',
         default='.csv')
 
     args = argparser.parse_args()

@@ -1,5 +1,9 @@
 # DPLocate Modules
-# DPLocate0-read(DPLocate Step 0): Extract the raw GPS data
+
+There are four DPLocate modules.
+
+# DPLocate0-read
+DPLocate Step 0: Extract the raw GPS data
 
 ## Table of contents
 1. [Requirements](#requirements)
@@ -58,7 +62,7 @@ The default is that the pipeline runs for the `new` files.
 ```bash
 # To generate reports for subject A and subject C in STUDY_PILOT under their processed folders
 # Define the PHOENIX, consent and MATLAB directories 
-parse_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] --study STUDY_PILOT --data-type phone --pipeline parse_gps_mc --include active --data-dir PROTECTED --subject A C
+parse_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] --study STUDY_PILOT --data-type phone --include active --data-dir PROTECTED --subject A C
 
 ```
 
@@ -67,7 +71,9 @@ For more information, please run
 ```bash
 parse_gps_mc.py -h
 ```
-# DPLocate1-preprocess(DPLocate Step 1): Preprocess the GPS data with temporal filtering
+
+# DPLocate1-preprocess
+DPLocate Step 1: Preprocess the GPS data with temporal filtering
 
 ## Table of contents
 1. [Requirements](#requirements)
@@ -121,7 +127,7 @@ The default is that the pipeline runs for the `new` files.
 ```bash
 # To generate reports for subject A and subject C in STUDY_PILOT under their processed folders
 # Define the PHOENIX, consent and MATLAB directories 
-preprocess_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] --study STUDY_PILOT --data-type phone --pipeline preprocess_gps_mc --include active --data-dir PROTECTED --subject A C
+preprocess_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] --study STUDY_PILOT --data-type phone --include active --data-dir PROTECTED --subject A C
 
 ```
 
@@ -130,7 +136,8 @@ For more information, please run
 preprocess_gps_mc.py -h
 ```
 
-# DPLocate2-process(DPLocate Step 2): Process the GPS data with clustering (every 150 days for long studies)
+# DPLocate2-process
+DPLocate Step 2: Process the GPS data with clustering (every 150 days for long studies)
 
 ## Table of contents
 1. [Requirements](#requirements)
@@ -172,8 +179,7 @@ export BEIWE_STUDY_PASSCODE='test passcode 1 2 3'
 ```bash
 # To generate reports for subject A and subject C in STUDY_PILOT under their processed folders
 # Define the PHOENIX, consent and MATLAB directories 
-process_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] 
---study STUDY_PILOT --data-type phone --pipeline process_gps_mc --include active --data-dir PROTECTED --subject A C
+process_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] --study STUDY_PILOT --data-type phone --include active --data-dir PROTECTED --subject A C
 
 ```
 
@@ -181,7 +187,8 @@ For more information, please run
 ```bash
 process_gps_mc.py -h
 ```
-# DPLocate3-aggregate(DPLocate Step 3): Aggregate the processed daily maps of the study
+# DPLocate3-aggregate
+DPLocate Step 3: Aggregate the processed daily maps of the study
 
 ## Table of contents
 1. [Requirements](#requirements)
@@ -218,8 +225,7 @@ export BEIWE_STUDY_PASSCODE='test passcode 1 2 3'
 ```bash
 # To generate reports for subject A and subject C in STUDY_PILOT under their processed folders
 # Define the PHOENIX, consent and MATLAB directories 
-aggregate_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] 
---study STUDY_PILOT --data-type phone --pipeline aggregate_gps_mc --include active --data-dir PROTECTED --subject A C
+aggregate_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] --study STUDY_PILOT --data-type phone --include active --data-dir PROTECTED --subject A C
 ```
 
 For more information, please run
@@ -227,7 +233,8 @@ For more information, please run
 aggregate_gps_mc.py -h
 ```
 
-# DPLocate4-plot(DPLocate Step 4): Plot color-coded GPS daily map
+# DPLocate4-plot
+DPLocate Step 4: Plot color-coded GPS daily map
 
 ## Table of contents
 1. [Requirements](#requirements)
@@ -263,8 +270,7 @@ export BEIWE_STUDY_PASSCODE='test passcode 1 2 3'
 ```bash
 # To generate reports for subject A and subject C in STUDY_PILOT under their processed folders
 # Define the PHOENIX, consent and MATLAB directories 
-phone_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] 
---study STUDY_PILOT --data-type phone --pipeline phone_gps_mc --include active --data-dir PROTECTED --subject A C
+phone_gps_mc.py --phoenix-dir [PHOENIX DIR] --consent-dir [CONSENT DIR] --matlab-dir [MATLAB DIR] --study STUDY_PILOT --data-type phone --include active --data-dir PROTECTED --subject A C
 ```
 
 For more information, please run
