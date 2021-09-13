@@ -1,14 +1,33 @@
 # DPLocate Modules
 
-There are four DPLocate modules.
+There are five DPLocate modules. They are run in tandem. Their dependencies are:
+
+* MATLAB >= 2017a
+* https://www.mathworks.com/products/mapping.html
+* Python >= 3.6
+* pandas
+
+# Installation
+
+* Make sure you have the stated MATLAB and Python
+* Install the [Mapping Toolbox](https://www.mathworks.com/products/mapping.html)
+* Install Python packages:
+
+      pip install -r requirements.txt
+
+* Finally, clone this repository:
+
+      git clone https://github.com/dptools/dplocate.git
+    
+  Individual module scripts are `dplocate/dplocate*/*py`. Learn more about them below.
+  
 
 # DPLocate0-read
 DPLocate Step 0: Extract the raw GPS data
 
 ## Table of contents
 1. [Requirements](#requirements)
-2. [Installation](#installation)
-3. [Usage](#usage)
+2. [Usage](#usage)
 
 ## Requirements
 - The Raw data is saved as an unencrypted `.json` file that is saved in 
@@ -39,16 +58,10 @@ acc1: accuracy(m)
 
 - After this step run dplocate-preprocess pipeline
 
-## Installation
 
-To install `dplocate0-read` on your system
-
-```bash
-git clone git@github.com:harvard-nrg/dplocate0-read.git 
-cd dplocate/dplocate0-read
-pip install -r requirements.txt
-```
 ### Passphrase
+(Encryption is not applied currently so you can skip all the *Passphrase* sections)
+
 For files that are locked, please provide a passphrase by setting the 
 `BEIWE_STUDY_PASSCODE` environment variable.
 For example:
@@ -77,8 +90,7 @@ DPLocate Step 1: Preprocess the GPS data with temporal filtering
 
 ## Table of contents
 1. [Requirements](#requirements)
-2. [Installation](#installation)
-3. [Usage](#usage)
+2. [Usage](#usage)
 
 ## Requirements
 - The Input to this module is the Output of dplocate0-read. The input data is saved as an unencrypted
@@ -105,14 +117,7 @@ acc1: accuracy(m)
 
 - After this step run dplocate2-process pipeline
 
-## Installation
-To install `dplocate1-preprocess` on your system
 
-```bash
-git clone git@github.com:harvard-nrg/dplocate1-preprocess.git 
-cd dplocate/dplocate1-preprocess
-pip install -r requirements.txt
-```
 ### Passphrase
 For files that are locked, please provide a passphrase by setting the 
 `BEIWE_STUDY_PASSCODE` environment variable.
@@ -141,8 +146,7 @@ DPLocate Step 2: Process the GPS data with clustering (every 150 days for long s
 
 ## Table of contents
 1. [Requirements](#requirements)
-2. [Installation](#installation)
-3. [Usage](#usage)
+2. [Usage](#usage)
 
 ## Requirements
 - The Input to this module is the Output of dplocate1-preprocess. 
@@ -159,14 +163,7 @@ DPLocate Step 2: Process the GPS data with clustering (every 150 days for long s
   coordinates of the Points of Interest (PoIs).
 - After this step run dplocate3-aggregate pipeline
 
-## Installation
-To install `dplocate2-process` on your system
 
-```bash
-git clone git@github.com:harvard-nrg/dplocate2-process.git 
-cd dplocate/dplocate-process
-pip install -r requirements.txt
-```
 ### Passphrase
 For files that are locked, please provide a passphrase by setting the 
 `BEIWE_STUDY_PASSCODE` environment variable.
@@ -192,8 +189,7 @@ DPLocate Step 3: Aggregate the processed daily maps of the study
 
 ## Table of contents
 1. [Requirements](#requirements)
-2. [Installation](#installation)
-3. [Usage](#usage)
+2. [Usage](#usage)
 
 ## Requirements
 - The Input to this module is the Output of dplocate2-process. 
@@ -206,13 +202,7 @@ DPLocate Step 3: Aggregate the processed daily maps of the study
 
 - After this step run dplocate4-plot pipeline
 
-## Installation
-To install `dplocate3-aggregate` on your system
-```bash
-git clone git@github.com:harvard-nrg/dplocate3-aggregate.git 
-cd dplocate/dplocate3-aggregate
-pip install -r requirements.txt
-```
+
 ### Passphrase
 For files that are locked, please provide a passphrase by setting the 
 `BEIWE_STUDY_PASSCODE` environment variable.
@@ -238,8 +228,7 @@ DPLocate Step 4: Plot color-coded GPS daily map
 
 ## Table of contents
 1. [Requirements](#requirements)
-2. [Installation](#installation)
-3. [Usage](#usage)
+2. [Usage](#usage)
 
 ## Requirements
 - The Input to this module is the Output of dplocate3-aggregate. 
@@ -250,13 +239,7 @@ DPLocate Step 4: Plot color-coded GPS daily map
 
 - This step plots the daily maps and transfers the processed data into the GENERAL folder.
 
-## Installation
-To install `dplocate4-plot` on your system
-```bash
-git clone git@github.com:harvard-nrg/dplocate4-plot.git 
-cd dplocate/dplocate4-plot
-pip install -r requirements.txt
-```
+
 ### Passphrase
 For files that are locked, please provide a passphrase by setting the 
 `BEIWE_STUDY_PASSCODE` environment variable.
