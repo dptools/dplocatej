@@ -11,6 +11,13 @@ There are five DPLocate modules. They are run in tandem. Their dependencies are:
 
 * Make sure you have the stated MATLAB and Python
 * Install the [Mapping Toolbox](https://www.mathworks.com/products/mapping.html)
+
+  The toolbox should automatically install when you install MATLAB.
+  Otherwise, [this](https://www.mathworks.com/matlabcentral/answers/1457044-install-a-toolbox-from-command-line?s_tid=mlc_ans_email_ques)
+  thread may be helpful to install it later. You can verify its existence by running
+  [this](https://www.mathworks.com/help/map/creating-maps-using-geoshow.html) quick example.
+
+
 * Install Python packages:
 
       pip install -r requirements.txt
