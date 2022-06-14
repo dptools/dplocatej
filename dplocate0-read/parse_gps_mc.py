@@ -62,7 +62,7 @@ def main():
         help='All subjects or only the active ones',
         default='all')
     argparser.add_argument('--encrypted',
-        help='All subjects or only the active ones',
+        help='Data encrypted (yes) or not (no)',
         default='no')
 
     args = argparser.parse_args()
