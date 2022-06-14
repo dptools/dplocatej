@@ -25,6 +25,7 @@ def parse_args():
         help='Path to the output directory', required=True)
     argparser.add_argument('--matlab-dir')
     argparser.add_argument('--extension')
+    argparser.add_argument('--encrypted')
     return argparser
 
 def main(args):
@@ -57,11 +58,11 @@ def main(args):
     run_matlab(read_dir, output_dir, args.extension, args.matlab_dir)
 
 # Run MATLAB
-def run_matlab(input_dir, output_dir, extension, matlab_dir):
+def run_matlab(input_dir, output_dir, extension, matlab_dir,encrypted):
     try:
         matlab_path = "addpath('{matlab_dir}');".format(matlab_dir=matlab_dir)
-        sub_cmd = "parse_gps_mc('{INPUT_DIR}','{OUTPUT_DIR}','{EXTENSION}','{matlab_dir}')".format(OUTPUT_DIR=output_dir,
-            INPUT_DIR=input_dir, EXTENSION=extension, matlab_dir=matlab_dir)
+        sub_cmd = "parse_gps_mc('{INPUT_DIR}','{OUTPUT_DIR}','{EXTENSION}','{matlab_dir}','{encrypted}')".format(OUTPUT_DIR=output_dir,
+            INPUT_DIR=input_dir, EXTENSION=extension, matlab_dir=matlab_dir, enctrypted=encrypted)
         
         sub_cmd = wrap_matlab(sub_cmd)
 
