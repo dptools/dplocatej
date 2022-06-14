@@ -61,9 +61,6 @@ def main():
     argparser.add_argument('--include',
         help='All subjects or only the active ones',
         default='all')
-    argparser.add_argument('--encrypted',
-        help='Data encrypted (yes) or not (no)',
-        default='no')
 
     args = argparser.parse_args()
 
@@ -112,7 +109,6 @@ def main():
                     '--study', str(study),
                     '--subject', str(subject),
                     '--matlab-dir', str(args.matlab_dir),
-                    '--encrypted', str(args.encrypted),
                     '--extension', str(args.extension)
                 ])
                 mod.main(new_args)
@@ -128,7 +124,6 @@ def main():
                     '--study', str(study),
                     '--subject', str(subject),
                     '--matlab-dir', str(args.matlab_dir),
-                    '--encrypted', str(args.encrypted),
                     '--extension', str(args.extension)
                 ])
                 mod.main(new_args)
