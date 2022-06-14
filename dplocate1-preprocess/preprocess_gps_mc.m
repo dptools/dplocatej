@@ -1,6 +1,6 @@
 function preprocess_gps_mc(file_path, output_dir, ref_date,matlab_dir)
 display('START');
-encp=0;
+encp=1;
 if encp==1
     % Get passcode
     pss = getenv('BEIWE_STUDY_PASSCODE');
