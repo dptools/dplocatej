@@ -1,6 +1,6 @@
 function parse_gps_mc(read_dir, out_dir, extension, matlab_dir)
 display('START');
-encp=1;
+encp=0;
 
 % Get passcode
 if encp==1
