@@ -55,7 +55,7 @@ def main(args):
     logger.addHandler(fh)
 
     # run MATLAB
-    run_matlab(read_dir, output_dir, args.extension, args.matlab_dir)
+    run_matlab(read_dir, output_dir, args.extension, args.matlab_dir, args.encrypted)
 
 # Run MATLAB
 def run_matlab(input_dir, output_dir, extension, matlab_dir,encrypted):
