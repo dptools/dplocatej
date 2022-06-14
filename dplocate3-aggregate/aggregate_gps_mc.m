@@ -253,6 +253,8 @@ else
     
     disp('Saving mat file');
     if encp==1
+    	tmpN = tempname('/tmp');
+        temp_unlocked=strcat(tmpN,'.mat');
         output_filepath='/tmp/daily.mat';
         save(output_filepath,'pdy3','ltkc','lnkc');
         pause(.01);   
